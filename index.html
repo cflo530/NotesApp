@@ -22,7 +22,7 @@ var textElement = document.getElementById("note")
 
 function saveNote() {
     if(textElement.value == ""){
-        return alert('text is empty');
+        return alert("text is empty");
     }
     const id = getNoteId();
     let noteObject = getExistingNotes();
@@ -30,7 +30,7 @@ function saveNote() {
         noteObject = {};
     }
     noteObject[id] = textElement.value;
-    localStorage.setItem('notes', JSON.stringify(noteObject));
-    alert('Note Saved');
+    localStorage.setItem("notes", JSON.stringify(noteObject));
+    alert("Note Saved");
 }
 </script>
